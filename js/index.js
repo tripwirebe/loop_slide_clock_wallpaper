@@ -1,3 +1,8 @@
+/* Looped slide clock
+ * original author: GrimStorm 
+ * modifier : ZZZZzzzzac
+ */ 
+
 var size = 86;
 var columns = Array.from(document.getElementsByClassName('column'));
 var d = void 0,
