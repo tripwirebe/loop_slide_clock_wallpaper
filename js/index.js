@@ -41,7 +41,7 @@ function roll_scoll(ele, offset, render, delay) {
 
 function reset(ele, c, i) {
 	var target;
-	var offset = -c[i] * size - 86 * 6;		
+	var offset = -c[i] * size - 86 * 7;		
 	switch (i) {
 		case 0:
 			target = 2;	break;			
@@ -59,12 +59,12 @@ function reset(ele, c, i) {
 	if (c[i] == target) {
 		counter[i]++;
 		if (counter[i] > 1) {
-			roll_scoll(ele, - 86 * 5, 5, 0);
+			roll_scoll(ele, - 86 * 6, 6, 0);
 		} else {
-			roll_scoll(ele, offset, parseInt(c[i]) + 6, 300);
+			roll_scoll(ele, offset, parseInt(c[i]) + 7, 300);
 		}
 	} else {
-		roll_scoll(ele, offset, parseInt(c[i]) + 6, 300);
+		roll_scoll(ele, offset, parseInt(c[i]) + 7, 300);
 		counter[i] = 0;
 	}			
 }
