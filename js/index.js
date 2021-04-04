@@ -23,13 +23,13 @@ window.wallpaperPropertyListener = {
 };
 
 
-function padClock(p, n) {
-	return p + ('0' + n).slice(-2);
+function padClock(previous, _current) {
+	return previous + ('0' + _current).slice(-2);
 }
 
 function getClock() {
-	d = new Date();
-	return [use24HourClock ? d.getHours() : d.getHours() % 12 || 12, d.getMinutes(), d.getSeconds()].reduce(padClock, '');
+	date = new Date();
+	return [use24HourClock ? date.getHours() : ddate.getHours() % 12 || 12, date.getMinutes(), date.getSeconds()].reduce(padClock, '');
 }
 
 function getClass(render, i2) {
@@ -53,7 +53,7 @@ function roll_scoll(ele, offset, render, delay) {
 
 function reset(ele, c, i) {
 	var target;
-	var offset = -c[i] * size - 86 * 7;
+	var offset = -c[i] * size - size * 7;
 	switch (i) {
 		case 0:
 			target = 2; break;
@@ -71,7 +71,7 @@ function reset(ele, c, i) {
 	if (c[i] == target) {
 		counter[i]++;
 		if (counter[i] > 1) {
-			roll_scoll(ele, - 86 * 6, 6, 0);
+			roll_scoll(ele, - size * 6, 6, 0);
 		} else {
 			roll_scoll(ele, offset, parseInt(c[i]) + 7, animationDelay);
 		}
