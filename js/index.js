@@ -19,6 +19,9 @@ window.wallpaperPropertyListener = {
 		if (properties.animationDelay) {
 			animationDelay = properties.animationDelay.value;
 		}
+		if (properties.ClockStyle24) {
+			use24HourClock=properties.ClockStyle24.value;
+		}
 	}
 };
 
@@ -29,7 +32,7 @@ function padClock(previous, _current) {
 
 function getClock() {
 	date = new Date();
-	return [use24HourClock ? date.getHours() : ddate.getHours() % 12 || 12, date.getMinutes(), date.getSeconds()].reduce(padClock, '');
+	return [use24HourClock ? date.getHours() : date.getHours() % 12 || 12, date.getMinutes(), date.getSeconds()].reduce(padClock, '');
 }
 
 function getClass(render, i2) {

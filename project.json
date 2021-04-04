@@ -5,12 +5,21 @@
 	"general": {
 		"properties": {
 			"schemecolor": {
+				"index":0,
 				"order": 0,
 				"text": "ui_browse_properties_scheme_color",
 				"type": "color",
 				"value": "0 0 0"
 			},
+			"ClockStyle24":{
+				"index":1,
+				"order":0,
+				"text":"24-hour clock",
+				"type":"bool",
+				"value":true
+			},
 			"animationDelay": {
+				"index":2,
 				"order": 0,
 				"text": "Animation delay",
 				"type": "slider",
@@ -25,6 +34,7 @@
 		],
 		"title": "Slide Clock",
 		"type": "web",
-		"visibility": "public"
+		"visibility": "public",
+		"version" : 1
 	}
 }
